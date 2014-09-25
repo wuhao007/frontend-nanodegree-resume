@@ -150,9 +150,9 @@ projects.display = function() {
         $("#projects").append(HTMLprojectStart);
         formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
         $(".project-entry:last").append(formattedTitle);
-        formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].date);
+        formattedDates = HTMLprojectDates.replace("%data%", work.jobs[job].date);
         $(".project-entry:last").append(formattedDates);
-        formattedDescription = HTMLprojectDates.replace("%data%", work.jobs[job].description);
+        formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
         $(".project-entry:last").append(formattedDescription);
 
     }
