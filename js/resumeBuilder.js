@@ -157,11 +157,6 @@ projects.display = function() {
 
     }
 }
-$(document).click(function(loc) {
-    var x = loc.pageX;
-    var y = loc.pageY;
-    logClicks(x, y);
-});
 function inName(name) {
     name = name.trim.split(" ");
     console.log(name);
