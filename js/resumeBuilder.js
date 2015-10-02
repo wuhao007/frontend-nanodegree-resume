@@ -11,7 +11,7 @@ var bio = {
         "email":"wuhao@nyu.edu",
         "github":"wuhao007",
         "twitter":"@wuhao007",
-        "location":"New York"
+        "location":"Seattle"
     },
     "WelcomeMessage":"Alles Gute",
     "skills": [
@@ -44,6 +44,7 @@ $("#topContacts").append(formattedGithub);
 $("#topContacts").append(formattedLocation);
 
 var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").prepend(formattedBioPic);
 var work = {};
 work.position = "Fullstack Developer";
 work.employer = "Ensa";
@@ -92,29 +93,34 @@ var work = {
         {
             "employer":"Ensa",
             "title":"Full­stack developer",
+            "location": "New York, NY",
             "date":"June 23, 2014 - Now",
             "description":"Conceive, design, and implement cognitive recommendation system for ensa application. Train and generate recommendations using Naive Bayes, Decision Tree on Rails for Ensa."
         },
         {
             "employer":"Urlinq",
             "title":"Back-EG 2014 - June 20, 2014",
+            "location": "New York, NY",
             "description":"Create tags using Naive Bayes in PHP. Query course data from social network on MySQL."
         },
         {
             "employer":"Synopsys",
             "title":"R&D Engineer",
             "date":"March 21, 2012 - August 23, 2013",
+            "location": "Shanghai, China",
             "description":"Implemented Monet, a new voltage-aware static checker for rapid power management verification. Implemented Database and UPF query tcl commands. Implemented fork and feedthrough checker using C++ and Boost for AMD."
         },
         {
             "employer":"Cadence Design Systems",
             "title":"Member of Technical Staff",
+            "location": "Shanghai, China",
             "date":"March 1, 2010 - March 20, 2012",
             "description":"Leader of thermal analysis team; Default engineer of clock tree synthesis team; Code reviewer of low power team. Implemented half-node thermal analysis for the 3D-IC simulation for Samsung using C++. Optimized the Finite Element Analysis and got a precise thermal simulation result in 3D-IC using C++. Investigated a fast transient thermal analysis method for Qualcomm using matlab. Optimized a balanced clock tree algorithm for Fujitsu integrated chip using C++. Won 3 Instant Recognition rewards for reviewing code of low power team."
         }, 
         {
             "employer":"GE",
             "title":"Intern",
+            "location": "Shanghai, China",
             "date":"February 1, 2010 - February 26, 2010",
             "description":"Intern in Programmable Logic Controller team. Implemented smoke testing to test Programmable Logic Controller using Python."
         }
@@ -164,3 +170,4 @@ function inName(name) {
     return name[0] + " " + name[1];
 }
 $('#main').append(internationalizeButton);
+$('#mapDiv').append(googleMap);
